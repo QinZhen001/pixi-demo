@@ -1,9 +1,7 @@
+import RouteContainer from './router/index.jsx'
+
 function App() {
-  return (
-    <>
-      11111
-    </>
-  )
+  return <RouteContainer></RouteContainer>
 }
 
 export default App
