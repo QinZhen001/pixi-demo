@@ -1,2 +1,2 @@
-# pixi-demo
-:beer: pixi-demo
+# React + Vite
+
