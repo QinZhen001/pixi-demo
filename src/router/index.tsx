@@ -1,0 +1,14 @@
+
+import { HashRouter, Route, Routes } from 'react-router-dom';
+
+const RouteContainer = () => {
+  return <HashRouter>
+    <Routes>
+      {/* <Route path='/' element={<LoginPage />} />
+      <Route path='/main' element={<MainPage />} /> */}
+    </Routes>
+  </HashRouter>
+}
+
+
+export default RouteContainer;
