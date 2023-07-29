@@ -1,7 +1,24 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import pck from "./package.json"
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
+
+
+const genBaseUrl = (mode) => {
+  switch (mode) {
+    case "production":
+      return `/${pck.name}/`
+    default:
+      return "/"
+  }
+}
+
+export default defineConfig(({ mode }) => {
+  return {
+    base: genBaseUrl(mode),
+    build:{
+      outDir:"docs"
+    },
+    plugins: [react()],
+  }
 })
