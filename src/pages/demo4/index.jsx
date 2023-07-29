@@ -11,6 +11,18 @@ const DEMO4 = () => {
     drawText()
   }, [])
 
+  useEffect(()=>{
+
+    const resize = () => {
+      location.reload()
+    }
+
+    window.addEventListener('resize', resize)
+    return () => {
+      window.removeEventListener('resize', resize)
+    }
+  },[])
+
   const init = () => {
     app = new PIXI.Application({ background: '#1099bb', resizeTo: window, antialias: true });
     demoRef.current.appendChild(app.view);
