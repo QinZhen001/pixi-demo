@@ -16,9 +16,6 @@ const genBaseUrl = (mode) => {
 export default defineConfig(({ mode }) => {
   return {
     base: genBaseUrl(mode),
-    build:{
-      outDir:"docs"
-    },
     plugins: [react()],
   }
 })
