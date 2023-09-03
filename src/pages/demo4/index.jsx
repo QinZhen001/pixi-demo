@@ -8,6 +8,7 @@ const DEMO4 = () => {
 
   useEffect(() => {
     init()
+    
     drawText()
   }, [])
 
